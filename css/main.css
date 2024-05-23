@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+}
+#canvas {
+  width: 100%;
+  border: 1px solid white;
+}
+#history {
+  max-height: 750px;
+  overflow: auto;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: gray;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border: 4px solid gray;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+}
+.btn-sidebar {
+  position: absolute;
+  right: 30px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-weight: bolder;
+  font-size: 25px;
+}
+.sidebar {
+  background-color: white;
+  color: black;
+  position: absolute;
+  top: 0;
+  right: -420px;
+  width: 420px;
+  height: 100vh;
+  z-index: 5;
+  transition: .5s;
+}
+.header-sidebar {
+  text-align: center;
+  margin: 2rem 0;
+}
+.footer-sidebar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#btn-sidebar-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  font-size: 20px;
+  outline: none;
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  .row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #history {
+    max-height: 200px;
+  }
+}
